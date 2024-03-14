@@ -553,3 +553,60 @@ test.c:370:20: error: request for member ‘siguiente’ in something not a stru
 cc1: all warnings being treated as errors
 Compilation failed
 312378b
+Thu 14 Mar 2024 09:18:56 PM UTC: 
+ exercises.c | 31 ++++++++++++-------------------
+ 1 file changed, 12 insertions(+), 19 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:81:69: error: expected expression before ‘}’ token
+   81 |   int checkSorted(int arr[], int size) { for (int i = 0; i < size;) }
+      |                                                                     ^
+exercises.c:81:69: error: no return statement in function returning non-void [-Werror=return-type]
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:107:24: error: invalid type argument of ‘->’ (have ‘Autor’)
+  107 |     strcpy(libro->autor->nombre, nombreAutor);
+      |                        ^~
+exercises.c:108:17: error: invalid type argument of ‘->’ (have ‘Autor’)
+  108 |     libro->autor->anioNacimiento = anioNacimiento;
+      |                 ^~
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:128:3: error: no return statement in function returning non-void [-Werror=return-type]
+  128 |   Nodo *crearListaEnlazada(int arr[], int size) {}
+      |   ^~~~
+test.c: In function ‘print_linked_list’:
+test.c:41:11: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+   41 |     lista = lista->siguiente;
+      |           ^
+test.c: In function ‘test_crearListaEnlazada’:
+test.c:344:17: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  344 |           lista = lista->siguiente;
+      |                 ^
+test.c:349:15: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  349 |       current = current->siguiente;
+      |               ^
+test.c:361:15: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  361 |         lista = lista->siguiente;
+      |               ^
+test.c:370:13: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  370 |       lista = lista->siguiente;
+      |             ^
+test.c: In function ‘mergeSortedArrays’:
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0959bad
