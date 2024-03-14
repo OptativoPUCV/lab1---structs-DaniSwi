@@ -61,6 +61,7 @@ arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]){
+  result = (int *)malloc(sizeof(int));
   int i = 0, j = 0;
   for(int k=0;k<size1+size2;++k){
     if(arr1[i] <= arr2[j] && i < size1){
@@ -128,9 +129,12 @@ lista enlazada.
 Recuerda reservar memoria dinámica para cada nodo usando malloc.
   */
 
-typedef struct nodo {
+typedef struct{
   int numero;
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size) {
+  
+
+}
