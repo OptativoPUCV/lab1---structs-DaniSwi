@@ -41,3 +41,20 @@ Thu 14 Mar 2024 08:31:22 PM UTC:
  tests:  0|5
 total_score: 20/70
 8814213
+Thu 14 Mar 2024 08:35:28 PM UTC: 
+ exercises.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:44:7: error: array size missing in ‘arrayNuevo’
+   44 |   int arrayNuevo[];
+      |       ^~~~~~~~~~
+exercises.c:48:17: error: array subscript is not an integer
+   48 |       arrayNuevo[newSize] = arr[i];
+      |                 ^
+exercises.c:52:10: error: function returns address of local variable [-Werror=return-local-addr]
+   52 |   return arrayNuevo;
+      |          ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+59c597b
