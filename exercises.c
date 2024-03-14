@@ -41,12 +41,12 @@ y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize){
-  int *arrayNuevo = (int *)malloc(sizeof(int));
   newSize = 0;
+  int arrayNuevo[*newSize];
   for(int i=0;i<size;++i){
     if(arr[i] % 2 == 0){
       arrayNuevo[newSize] = arr[i];
-      ++newSize;
+      ++*newSize;
     }
   }
   return arrayNuevo;
