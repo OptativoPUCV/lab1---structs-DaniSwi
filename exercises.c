@@ -60,11 +60,10 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]){}/*
-  result = (int *)malloc(sizeof(int));
+                       int result[]){
   int i = 0, j = 0;
   for(int k=0;k<size1+size2;++k){
-    if(arr1[i] <= arr2[j] && i < size1){
+    if(arr1[i] <= arr2[j] && i < j){
       result[k] = arr1[i];
       ++i;
     } else {
@@ -72,7 +71,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       ++j;
     }
   }
-*/
 
 /*
 Ejercicio 5: Comprobación de Ordenación
@@ -80,7 +78,11 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size){}
+int checkSorted(int arr[], int size){
+  for(int i=0;i<size;++i){
+    
+  }
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
@@ -102,13 +104,13 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion){}
-  /*libro = (Libro *)malloc(sizeof(Libro));
+                      int anioNacimiento, int anioPublicacion){
+  libro = (Libro *)malloc(sizeof(Libro));
   strcpy(libro->titulo, titulo);
   strcpy(libro->autor->nombre, nombreAutor);
   libro->autor->anioNacimiento = anioNacimiento;
-  libro->anioPublicacion = anioPublicacion;*/
-
+  libro->anioPublicacion = anioPublicacion;
+}
 
 /*
 Ejercicio 7: Lista enlazada de números
