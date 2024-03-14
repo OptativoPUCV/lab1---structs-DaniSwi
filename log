@@ -99,3 +99,13 @@ exercises.c:52:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 0f76629
+Thu 14 Mar 2024 08:39:05 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:49:17: error: array subscript is not an integer
+   49 |       arrayNuevo[newSize] = arr[i];
+      |                 ^
+Compilation failed
+8791de5
