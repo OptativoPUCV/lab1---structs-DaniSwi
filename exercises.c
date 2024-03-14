@@ -53,12 +53,12 @@ int *filterEvenNumbers(int arr[], int size, int *newSize){
   return arrayNuevo;
 }
 
-/*
+/* 
 Ejercicio 4: Fusión de dos Arreglos Ordenados
 Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
-*/
+
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]){
   int i = 0, j = 0;
@@ -72,25 +72,25 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
     }
   }
 
-/*
+
 Ejercicio 5: Comprobación de Ordenación
 Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
-*/
+
 int checkSorted(int arr[], int size){
   for(int i=0;i<size;++i){
     
   }
 }
 
-/*
+
 Ejercicio 6: Información de una Biblioteca
 Descripción: Vamos a representar la información de una biblioteca. En la
 biblioteca, hay libros, y cada libro tiene un autor. Queremos organizar esta
 información utilizando estructuras anidadas en C. Escribe la función para
 inicializar la información de un libro.
-*/
+
 
 typedef struct {
   char nombre[50];
@@ -121,7 +121,7 @@ mismo orden que los números aparecen en el arreglo. El último nodo de la lista
 debe apuntar a NULL. La función debe devolver un puntero al primer nodo de la
 lista enlazada.
 Recuerda reservar memoria dinámica para cada nodo usando malloc.
-  */
+
 
 typedef struct{
   int numero;
@@ -132,3 +132,4 @@ Nodo *crearListaEnlazada(int arr[], int size) {
   
 
 }
+*/
