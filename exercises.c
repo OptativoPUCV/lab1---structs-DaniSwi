@@ -27,9 +27,9 @@ void reverseArray(int arr[], int size){
   int temp;
   int k = 0;
   for(int i=size-1;i>=0;--i){
-    temp = arr[i];
-    arr[i] = arr[k];
-    arr[k] = temp; 
+    temp = arr[k];
+    arr[k] = arr[i];
+    arr[i] = temp;
   }  
 }
 
