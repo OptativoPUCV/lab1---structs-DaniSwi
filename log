@@ -335,3 +335,36 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 1834e3c
+Thu 14 Mar 2024 09:10:10 PM UTC: 
+ exercises.c | 22 +++++++---------------
+ 1 file changed, 7 insertions(+), 15 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:83:45: error: returning ‘void *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Werror=int-conversion]
+   83 | int checkSorted(int arr[], int size){return NULL;}
+      |                                             ^~~~
+test.c: In function ‘print_linked_list’:
+test.c:41:11: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+   41 |     lista = lista->siguiente;
+      |           ^
+test.c: In function ‘test_crearListaEnlazada’:
+test.c:344:17: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  344 |           lista = lista->siguiente;
+      |                 ^
+test.c:349:15: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  349 |       current = current->siguiente;
+      |               ^
+test.c:361:15: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  361 |         lista = lista->siguiente;
+      |               ^
+test.c:370:13: error: assignment to ‘Nodo *’ from incompatible pointer type ‘struct nodo *’ [-Werror=incompatible-pointer-types]
+  370 |       lista = lista->siguiente;
+      |             ^
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:132:1: error: control reaches end of non-void function [-Werror=return-type]
+  132 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1407d91
