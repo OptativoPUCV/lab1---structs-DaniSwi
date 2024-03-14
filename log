@@ -82,3 +82,20 @@ exercises.c:52:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 01d724f
+Thu 14 Mar 2024 08:38:18 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:45:7: error: size of array ‘arrayNuevo’ has non-integer type
+   45 |   int arrayNuevo[newSize];
+      |       ^~~~~~~~~~
+exercises.c:48:17: error: array subscript is not an integer
+   48 |       arrayNuevo[newSize] = arr[i];
+      |                 ^
+exercises.c:52:10: error: function returns address of local variable [-Werror=return-local-addr]
+   52 |   return arrayNuevo;
+      |          ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0f76629

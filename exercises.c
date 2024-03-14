@@ -42,7 +42,7 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize){
   newSize = 0;
-  int arrayNuevo[*newSize];
+  int arrayNuevo[newSize];
   for(int i=0;i<size;++i){
     if(arr[i] % 2 == 0){
       arrayNuevo[newSize] = arr[i];
