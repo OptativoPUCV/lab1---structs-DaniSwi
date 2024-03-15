@@ -128,7 +128,7 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) {
   Nodo *cabeza, *temp, *actual;
   temp = (Nodo *)malloc(sizeof(Nodo));
-  temp->libro = libro;
+  temp->libro = &libro;
   temp->siguiente = NULL;
   strcpy(libro->titulo, titulo);
   strcpy(libro->autor.nombre, nombreAutor);
