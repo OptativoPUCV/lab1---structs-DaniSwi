@@ -1001,3 +1001,24 @@ exercises.c:125:3: note: previous declaration of ‘Nodo’ with type ‘Nodo’
 cc1: all warnings being treated as errors
 Compilation failed
 9069447
+Fri 15 Mar 2024 02:19:56 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:129:25: error: unused variable ‘actual’ [-Werror=unused-variable]
+  129 |   Nodo *cabeza, *temp, *actual;
+      |                         ^~~~~~
+exercises.c:129:9: error: unused variable ‘cabeza’ [-Werror=unused-variable]
+  129 |   Nodo *cabeza, *temp, *actual;
+      |         ^~~~~~
+exercises.c: At top level:
+exercises.c:153:3: error: conflicting types for ‘Nodo’; have ‘struct nodo’
+  153 | } Nodo;
+      |   ^~~~
+exercises.c:125:3: note: previous declaration of ‘Nodo’ with type ‘Nodo’
+  125 | } Nodo;
+      |   ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+75eeb4d
