@@ -1043,3 +1043,9 @@ exercises.c:125:3: note: previous declaration of ‘Nodo’ with type ‘Nodo’
 cc1: all warnings being treated as errors
 Compilation failed
 3bb40b5
+Fri 15 Mar 2024 02:25:14 PM UTC: 
+ exercises.c | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
+ tests:  0|2
+total_score: 50/70
+3dca35a
