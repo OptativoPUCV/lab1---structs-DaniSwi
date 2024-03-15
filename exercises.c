@@ -83,13 +83,13 @@ int checkSorted(int arr[], int size) {
   int ascendente = 1;
   int descendiente = 1;
   for(int i=0;i<size;++i){
-    if(arr[i] > arr[i+1]){
+    if((arr[i] > arr[i+1]) && (i+1 != size)){
       descendiente = 0;
       break;
     }
   }
   for(int i=0;i<size;++i){
-    if(arr[i] < arr[i+1]){
+    if((arr[i] < arr[i+1]) && (i+1 != size)){
       ascendente = 0;
       break;
     }
