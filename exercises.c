@@ -82,7 +82,21 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) {
   bool ascendente = true;
   bool descendiente = true;
-  
+  for(int i=0;i<size;++i){
+    if(arr[i] > arr[i+1]){
+      descendiente = false;
+      break;
+    }
+  }
+  for(int i=0;i<size;++i){
+    if(arr[i] < arr[i+1]){
+      ascendente = false;
+      break;
+    }
+  }
+  if(ascendente) return 1;
+  else if(descendiente) return -1;
+  else return 0;
   
 }
 

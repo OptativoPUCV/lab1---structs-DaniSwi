@@ -862,3 +862,30 @@ exercises.c:87:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 d281383
+Fri 15 Mar 2024 01:11:12 AM UTC: 
+ exercises.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:83:3: error: unknown type name ‘bool’
+   83 |   bool ascendente = true;
+      |   ^~~~
+exercises.c:6:1: note: ‘bool’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
+    5 | #include <string.h>
+  +++ |+#include <stdbool.h>
+    6 | 
+exercises.c:83:21: error: ‘true’ undeclared (first use in this function)
+   83 |   bool ascendente = true;
+      |                     ^~~~
+exercises.c:83:21: note: ‘true’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
+exercises.c:83:21: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:84:3: error: unknown type name ‘bool’
+   84 |   bool descendiente = true;
+      |   ^~~~
+exercises.c:84:3: note: ‘bool’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
+exercises.c:87:22: error: ‘false’ undeclared (first use in this function)
+   87 |       descendiente = false;
+      |                      ^~~~~
+exercises.c:87:22: note: ‘false’ is defined in header ‘<stdbool.h>’; did you forget to ‘#include <stdbool.h>’?
+Compilation failed
+31ce11a
