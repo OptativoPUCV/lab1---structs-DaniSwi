@@ -89,7 +89,7 @@ int checkSorted(int arr[], int size) {
     }
   }
   for(int i=0;i<size;++i){
-    if((arr[i] < arr[i+1]) && (i+1 != size)){
+    if((arr[i] < arr[i+1]) && (i+1 != size)){ //tenia que comprobar si hay un dato en la siguiente posicion, o se bugeaba el codigo xdxdxd
       descendiente = 0;
       break;
     }
@@ -120,7 +120,13 @@ typedef struct {
 } Libro;
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
-                      int anioNacimiento, int anioPublicacion) {}
+                      int anioNacimiento, int anioPublicacion) {
+  libro = (Libro *)malloc(sizeof(Libro));
+  strcpy(libro->titulo, titulo);
+  strcpy(libro->autor.nombre, nombreAutor);
+  libro->autor.anioNacimiento = anioNacimiento;
+  libro->anioPublicacion = anioNacimiento;
+}
 
 /*
 Ejercicio 7: Lista enlazada de números
