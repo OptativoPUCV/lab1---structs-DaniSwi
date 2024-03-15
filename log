@@ -919,3 +919,32 @@ Fri 15 Mar 2024 01:20:49 AM UTC:
  tests:  0|2
 total_score: 50/70
 9837a90
+Fri 15 Mar 2024 02:10:36 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:125:10: error: passing argument 1 of ‘strcpy’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+  125 |   strcpy(titulo, libro->titulo);
+      |          ^~~~~~
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:126:10: error: passing argument 1 of ‘strcpy’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+  126 |   strcpy(nombreAutor, libro->autor.nombre);
+      |          ^~~~~~~~~~~
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f021d3e
