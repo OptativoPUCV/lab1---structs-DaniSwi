@@ -1022,3 +1022,24 @@ exercises.c:125:3: note: previous declaration of ‘Nodo’ with type ‘Nodo’
 cc1: all warnings being treated as errors
 Compilation failed
 75eeb4d
+Fri 15 Mar 2024 02:21:52 PM UTC: 
+ exercises.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:135:17: error: incompatible types when assigning to type ‘Libro’ from type ‘Libro *’
+  135 |   temp->libro = libro;
+      |                 ^~~~~
+exercises.c:138:26: error: assignment to ‘struct nodo *’ from incompatible pointer type ‘Nodo *’ [-Werror=incompatible-pointer-types]
+  138 |   else actual->siguiente = temp;
+      |                          ^
+exercises.c: At top level:
+exercises.c:156:3: error: conflicting types for ‘Nodo’; have ‘struct nodo’
+  156 | } Nodo;
+      |   ^~~~
+exercises.c:125:3: note: previous declaration of ‘Nodo’ with type ‘Nodo’
+  125 | } Nodo;
+      |   ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3bb40b5

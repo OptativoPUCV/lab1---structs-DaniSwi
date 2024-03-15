@@ -127,13 +127,16 @@ typedef struct {
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) {
   Nodo *cabeza, *temp, *actual;
-  temp = (Nodo *)malloc(sizeof(Nodo));
-  temp->libro = *libro;
-  temp->siguiente = NULL;
   strcpy(libro->titulo, titulo);
   strcpy(libro->autor.nombre, nombreAutor);
   libro->autor.anioNacimiento = anioNacimiento;
   libro->anioPublicacion = anioNacimiento;
+  temp = (Nodo *)malloc(sizeof(Nodo));
+  temp->libro = libro;
+  temp->siguiente = NULL;
+  if(cabeza == NULL) cabeza = temp;
+  else actual->siguiente = temp;
+  actual = temp;
 }
 
 /*
